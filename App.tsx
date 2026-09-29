@@ -5,12 +5,11 @@
  * @format
  */
 
-import { StatusBar, StyleSheet, useColorScheme } from 'react-native';
+import { StatusBar, StyleSheet, Text, useColorScheme } from 'react-native';
 import {
   SafeAreaProvider,
   SafeAreaView,
 } from 'react-native-safe-area-context';
-import PracticeScreen from './src/Screens/PracticeScreen/PracticeScreen';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -27,7 +26,7 @@ function AppContent() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <PracticeScreen/>
+      <Text>hello world</Text>
     </SafeAreaView>
   );
 }
@@ -35,6 +34,7 @@ function AppContent() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "white"
   },
 });
 
