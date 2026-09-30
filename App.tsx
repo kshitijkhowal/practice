@@ -26,7 +26,7 @@ function AppContent() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text>hello world</Text>
+      <Text>Hello World!</Text>
     </SafeAreaView>
   );
 }
