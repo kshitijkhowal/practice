@@ -5,11 +5,12 @@
  * @format
  */
 
-import { StatusBar, StyleSheet, Text, useColorScheme } from 'react-native';
+import { StatusBar, StyleSheet, useColorScheme } from 'react-native';
 import {
   SafeAreaProvider,
   SafeAreaView,
 } from 'react-native-safe-area-context';
+import TaskManagerScreen from './src/TaskManagerScreen/TaskManagerScreen';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -26,7 +27,7 @@ function AppContent() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Hello World!</Text>
+      <TaskManagerScreen/>
     </SafeAreaView>
   );
 }
