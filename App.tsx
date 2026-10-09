@@ -10,6 +10,7 @@ import {
   SafeAreaProvider,
   SafeAreaView,
 } from 'react-native-safe-area-context';
+import DemoScreen from './src/screens/DemoScreen';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -26,7 +27,7 @@ function AppContent() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Hello World!</Text>
+      <DemoScreen/>
     </SafeAreaView>
   );
 }
