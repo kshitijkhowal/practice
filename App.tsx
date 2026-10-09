@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -10,6 +11,8 @@ import {
   SafeAreaProvider,
   SafeAreaView,
 } from 'react-native-safe-area-context';
+import ChipsInput, { Chip } from './src/component/ChipsInput';
+import { useState } from 'react';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
@@ -24,9 +27,19 @@ function App() {
 
 function AppContent() {
 
+  const [chipsValue, setChipsValue] = useState<Chip[]>([
+    {label: "hi"},
+    {label: "hii"},
+    {label: "hiii"},
+
+  ])
+
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Hello World!</Text>
+      <ChipsInput
+        value={chipsValue}
+        setValue={setChipsValue}
+      />
     </SafeAreaView>
   );
 }
@@ -34,7 +47,8 @@ function AppContent() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white"
+    backgroundColor: "white",
+    padding: 10
   },
 });
 
